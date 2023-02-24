@@ -1,0 +1,18 @@
+from tkinter import *
+def fi():
+  canvas.delete("all")
+  m = random.randint(1, 3)
+  if m == 1:
+    t = canvas.create_polygon(150, 60, 60, 150, 240, 150, fill = 'purple1')
+  elif m == 2:
+    kr = canvas.create_oval(60, 60, 240, 240, fill = 'purple1')
+  elif m == 3:
+    kv = canvas.create_polygon(60, 60, 240, 60, 240, 240, 60, 240, fill = 'purple1')
+a = Tk()
+canvas = Canvas(a, width = 300, height = 300, bg = 'white')
+canvas.pack()
+t = canvas.create_polygon(150, 60, 60, 150, 240, 150, fill = 'purple1')
+kr = canvas.create_oval(60, 60, 240, 240, fill = 'purple1')
+kv = canvas.create_polygon(60, 60, 240, 60, 240, 240, 60, 240, fill = 'purple1')
+b = Button(a, text = 'Новая фигура', command = fi).pack()
+a.mainloop()
